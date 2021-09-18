@@ -1,0 +1,28 @@
+{
+    "name": "Year selector",
+    "version": "1.0",
+    "description": "Select sad year.",
+    "manifest_version": 2,
+    "permissions":[
+        "activeTab"
+    ],
+    "icons": {
+        "48": "border-48.png"
+      },
+    "content_scripts":[
+        {
+            "matches":[
+            "http://sad.mjdkh.ac.ir/student/scores/score.aspx",
+            "http://sad.mjdkh.ac.ir/student/program/examprogram.aspx",
+            "http://sad.mjdkh.ac.ir/student/scores/evaluate.aspx",
+            "http://sad.mjdkh.ac.ir/student/program/weeklyprogram.aspx",
+            "https://sad.mjdkh.ac.ir/student/scores/score.aspx",
+            "https://sad.mjdkh.ac.ir/student/program/examprogram.aspx",
+            "https://sad.mjdkh.ac.ir/student/scores/evaluate.aspx",
+            "https://sad.mjdkh.ac.ir/student/program/weeklyprogram.aspx"],
+            
+            "run_at": "document_end",
+            "js": ["script.js"]
+        }
+    ]
+}
